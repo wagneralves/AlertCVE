@@ -1,5 +1,15 @@
 # AlertCVE
 
+A ferramenta AlertCVE foi desenvolvida através de uma necessidade no trabalho em conjunto com um colega do time.
+Autores:
+Wagner Alves - Analista Red Team
+Pedro Ricardo - Analista Blue Team
+
+Essa ferramenta varre a conta oficial do cve.org no Twitter e monitora todas as novas postagens sobre CVEs, fazendo um filtro do que existe em sua organização e notificando em um grupo do telegram com uma mensagem personalizada e o link para a nova CVE.
+A ferramenta também grava um arquivo CSV com os logs das notificações para que possa ser consumido por um SIEM, em breve faremos o envio para um syslog para automatizar esse processo
+
+## Configuração
+
 Preencha os dados nas variáveis da seguinte forma no arquivo AlertCVE.py:
 
 Bearer Token da conta de desenvolvedor no Twitter
