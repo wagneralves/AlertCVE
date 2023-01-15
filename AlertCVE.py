@@ -4,10 +4,26 @@ import tweepy
 import time
 from datetime import datetime
 
-# Defina as configurações
-client = tweepy.Client(bearer_token='')   # Bearer Token da conta de desenvolvedor do Twitter
-token = '' # Token do bot do Telegran
-chat_id = -747936495  # ID do grupo do Telegram que receberá os alertas
+###############################
+### Defina as configurações ###
+###############################
+
+# Bearer Token da conta de desenvolvedor no Twitter
+TwitterToken = ''
+
+# Token do bot do Telegran
+TelegranToken = ''
+
+# ID do grupo do Telegram que receberá os alertas OBS: começa com sinal de -
+GrupoTelegram = ''
+
+#############################
+### Fim das configurações ###
+#############################
+
+client = tweepy.Client(bearer_token=TwitterToken)
+token = TelegranToken
+chat_id = GrupoTelegram  
 tweeter_id = '821806287461740544'  # ID da conta que buscamos as CVEs no Twitter
 num_max_result = 100     # Maximum results
 timeout = 5      # seconds
