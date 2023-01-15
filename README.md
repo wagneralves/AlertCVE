@@ -43,6 +43,8 @@ pip install -r requirements.txt
 
 python3 AlertCVE.py
 
+![image](https://user-images.githubusercontent.com/5523049/212563819-18045cbe-1422-4794-a29d-0683f3c2f20d.png)
+
 # Arquivo de controle
 
 O arquivo controle.txt existe para guardar o id do último tweet consultado para evitar receber em duplicidade os alertas de CVEs
