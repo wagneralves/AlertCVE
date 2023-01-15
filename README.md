@@ -44,7 +44,7 @@ pip install -r requirements.txt
 python3 AlertCVE.py
 
 <div align="center">
-<img src="https://user-images.githubusercontent.com/5523049/212564175-7332c4bb-4dc2-4454-b973-6e8a6ab15aa9.png" width="700px" />
+<img src="https://user-images.githubusercontent.com/5523049/212564175-7332c4bb-4dc2-4454-b973-6e8a6ab15aa9.png" width="1080px" />
 </div>
 
 <div align="center">
