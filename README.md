@@ -64,12 +64,10 @@ python3 AlertCVE.py
 ```
 
 
-
-
 <div align="center">
 <img src="https://user-images.githubusercontent.com/5523049/212564175-7332c4bb-4dc2-4454-b973-6e8a6ab15aa9.png" width="1080px" />
 </div>
-<br><br>
+<br>
 
 <div align="center">
 <img src="https://user-images.githubusercontent.com/5523049/212563819-18045cbe-1422-4794-a29d-0683f3c2f20d.png" width="320px" />
