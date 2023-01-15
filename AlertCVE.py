@@ -4,7 +4,7 @@ import tweepy
 import time
 from datetime import datetime
 
-# definição das variaveis
+# Defina as configurações
 client = tweepy.Client(bearer_token='')   # Bearer Token da conta de desenvolvedor do Twitter
 token = '' # Token do bot do Telegran
 chat_id = -747936495  # ID do grupo do Telegram que receberá os alertas
