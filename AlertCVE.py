@@ -15,7 +15,7 @@ TwitterToken = ''
 TelegranToken = ''
 
 # ID do grupo do Telegram que receberá os alertas OBS: começa com sinal de -
-GrupoTelegram = ''
+GroupTelegram = ''
 
 #############################
 ### Fim das configurações ###
@@ -23,7 +23,7 @@ GrupoTelegram = ''
 
 client = tweepy.Client(bearer_token=TwitterToken)
 token = TelegranToken
-chat_id = GrupoTelegram  
+chat_id = GroupTelegram  
 tweeter_id = '821806287461740544'  # ID da conta que buscamos as CVEs no Twitter
 num_max_result = 100     # Maximum results
 timeout = 5      # seconds

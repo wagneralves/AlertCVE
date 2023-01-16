@@ -1,40 +1,40 @@
 # AlertCVE
 
-A ferramenta AlertCVE foi desenvolvida através de uma necessidade no trabalho em conjunto com um colega do time.
+The AlertCVE tool was developed through a need to work together with a team.
 
-Autores:<br>
-Wagner Alves - Analista Red Team<br>
-Pedro Ricardo - Analista Blue Team
+Authors:<br>
+Wagner Alves - Red Team Analyst<br>
+Pedro Ricardo - Blue Team Analyst
 
-Essa ferramenta varre a conta oficial do cve.org no Twitter e monitora todas as novas postagens sobre CVEs, fazendo um filtro do que existe em sua organização e notificando em um grupo do telegram com uma mensagem personalizada e o link para a nova CVE.
-A ferramenta também grava um arquivo CSV com os logs das notificações para que possa ser consumido por um SIEM, em breve faremos o envio para um syslog para automatizar esse processo
+This tool scans the official cve.org Twitter account and monitors all new posts about CVEs, filtering what exists in your organization and notifying you in a telegram group with a personalized message and the link to the new CVE.
+The tool also records a CSV file with the notification logs so that it can be consumed by a SIEM, soon we will send it to a syslog to automate this process
 
-## Configuração
+## Settings
 
-Preencha os dados nas variáveis da seguinte forma no arquivo AlertCVE.py:
+Fill in the data in the variables as follows in the AlertCVE.py file:
 
-Bearer Token da conta de desenvolvedor no Twitter
+Developer Account Bearer Token on Twitter
 
 ```
 TwitterToken = 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
 ```
 
-Token do bot do Telegran
+Telegram bot token
 
 ```
 TelegranToken = 'XXXXXXXXXXXXXXXXXXXXXXXXXXXX'
 ```
 
-ID do grupo do Telegram que receberá os alertas, OBS: começa com sinal de -
+Telegram group ID that will receive the alerts, NOTE: starts with sign -
 
 ```
-GrupoTelegram = '-XXXXXXXXXX'
+GroupTelegram = '-XXXXXXXXXX'
 ```
 
-## Filtrando as CVEs
+## Filtering the CVEs
 
-Preencha ou altere o arquivo applications.json incluindo as tecnologias do seu ambiente para receber alertas apenas que possam demandar alguma análise técnica de correção em seu ambiente evitando receber notificações desnecessárias.
-Exemplo:
+Fill in or change the applications.json file including the technologies in your environment to only receive alerts that may require some technical analysis of correction in your environment, avoiding receiving unnecessary notifications.
+Example:
 
 ```
 {
@@ -46,7 +46,7 @@ Exemplo:
 }
 ```
 
-para adicionar uma nova rtecnologia coloca uma vírgula ao final da ultima e escreve entre aspas duplas o nome que deseja filtrar, como exemplo adicionaremos o servidor web apache:
+to add a new technology put a comma at the end of the last one and write the name you want to filter between double quotes, as an example we will add the apache web server:
 
 ```
 {
@@ -59,7 +59,7 @@ para adicionar uma nova rtecnologia coloca uma vírgula ao final da ultima e esc
 }
 ```
 
-## Instalação
+## Installation
 
 ```
 git clone https://github.com/wagneralves/AlertCVE.git
@@ -68,7 +68,7 @@ pip3 install -r requirements.txt
 ```
 
 
-## Utilização
+## Usage
 
 ```
 python3 AlertCVE.py
@@ -76,7 +76,7 @@ python3 AlertCVE.py
 
 
 <div align="center">
-<img src="https://user-images.githubusercontent.com/5523049/212564175-7332c4bb-4dc2-4454-b973-6e8a6ab15aa9.png" width="1080px" />
+<img src="https://user-images.githubusercontent.com/5523049/212672624-07337a13-ea88-42e3-b64d-c781e2ddceb4.png" width="1080px" />
 </div>
 <br>
 
@@ -84,10 +84,10 @@ python3 AlertCVE.py
 <img src="https://user-images.githubusercontent.com/5523049/212563819-18045cbe-1422-4794-a29d-0683f3c2f20d.png" width="320px" />
 </div>
 
-## Arquivo de controle
+## Control file
 
-O arquivo controle.txt existe para guardar o id do último tweet consultado para evitar receber em duplicidade os alertas de CVEs
+The controle.txt file exists to store the id of the last tweet consulted to avoid receiving CVE alerts twice
 
-## Arquivo de LOG
+## LOG file
 
-O arquivo logs_to_siem.csv guarda todo log de CVE que foi alertada para ser importado pelo SIEM, em breve faremos um envio via SYSLOG.
+The logs_to_siem.csv file keeps every CVE log that was alerted to be imported by SIEM, we will soon send it via SYSLOG.
